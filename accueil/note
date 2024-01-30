@@ -1,0 +1,6 @@
+verification de mot de passe
+hashed_password()
+si l utilisateur existe
+le nom de connexion s affiche sur toutes les pages
+ faire en sorte que le mot de passe demande au moins un caractere speciale
+ 

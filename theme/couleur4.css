@@ -1,0 +1,67 @@
+#searchSubmit{
+    background-color:#f5f5f5;
+    border-color:#555555;
+}
+
+#searchInput:focus{
+    background-color: #3498db;
+
+}
+
+.navbar,.footbar,#info,main{
+    background-color: #f5f5f5;
+}
+
+.logo_titleheader,.navbar ul li a,.logo_titlefooter,.footbar ul li a {color:#333333 ;}
+
+
+.navbar ul li a:hover, .footbar ul li a:hover{
+    color:#333333 ;
+    background-color: #555555;}
+
+.navbar ul li a:focus,#LOGOUT:focus,.footbar ul li a:focus{
+    color:#333333 ;
+    background-color:#3498db ;
+}
+
+#LOGOUT,.btn-submit{
+    background-color: #555555;
+}
+
+.footbar,  .logo_titlefooter,.contact-info a,.copyright-text,.form-label{
+    color:#333333 ;
+}
+
+.contact-info svg ,.btn-submit:hover{
+    fill: #3498db ;
+}
+
+.form-input {
+  border-color:#ccc;
+}
+.iframeContainer{
+    border-color: #555555;
+   }
+
+
+body{
+    background-color:#f5f5f5;
+   }
+#switch{
+    background-color: #f5f5f5;
+}
+#switch:hover{
+    background-color: #3498db;
+}
+.iframeContainer{
+  background-color: #555555;
+}
+
+.container{background-color:#f5f5f5;}
+.matiere{border-color:#3498db;}
+.container  {color: #555555;}
+.container h3{ color:#3498db;
+}
+.lien {color:#555555}
+.lien:hover{background-color:#3498db;color:#555555}
+.lien:focus{background-color:#3498db;color:#f5f5f5}

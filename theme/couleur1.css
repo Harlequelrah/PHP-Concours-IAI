@@ -1,0 +1,62 @@
+#searchSubmit{
+    background-color:#ffb42a;
+    border-color:#ffb42a;
+}
+
+#searchInput:focus{
+    background-color: darkmagenta;
+
+}
+
+.navbar,.footbar,#info,main{
+    background-color: #1d1d1d;
+}
+
+.logo_titleheader,.navbar ul li a,.logo_titlefooter,.footbar ul li a {color:#fff;}
+
+
+.navbar ul li a:hover, .footbar ul li a:hover{
+    color:#1d1d1d;
+    background-color: #ffb42a;}
+
+.navbar ul li a:focus,#LOGOUT:focus,.footbar ul li a:focus{
+    color:#1d1d1d;
+    background-color:darkmagenta;
+}
+
+#LOGOUT,.btn-submit{
+    background-color: #ffb42a;
+}
+
+.footbar,  .logo_titlefooter,.contact-info a,.copyright-text,.form-label{
+    color:#ffb42a;
+}
+
+.contact-info svg ,.btn-submit:hover{
+    fill: darkmagenta;
+}
+#switch:hover{
+    background-color:darkmagenta ;
+}
+.form-input {
+  border-color:#ccc;
+}
+.iframeContainer{
+    border-color: #ffb42a;
+   }
+
+
+body{
+    background-color:#1d1d1d;
+   }
+#switch{
+    background-color: #ffb42a;
+}
+.container{background-color:#1d1d1d;}
+.matiere{border-color:darkmagenta;}
+.container  {color: #fff;}
+.container h3{ color:darkmagenta;
+}
+.lien {color:#fff}
+.lien:hover{background-color:#ffb42a;color:#1d1d1d}
+.lien:focus{background-color:darkmagenta;color:#1d1d1d}

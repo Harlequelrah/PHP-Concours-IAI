@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia&display=swap');
+nav{
+
+    font-family: 'Kalnia', serif;
+    /* position:relative; */
+    height:150px;
+
+}
+
+#searchInput{
+    position:absolute;
+    top:120px;
+    right:40px;
+    width:150px;
+  }
+#searchSubmit{
+  position:absolute;
+  top:160px;
+  right:40px;
+  width:150px;
+}
+
+
+
+
+
+
+
+.logoiaiheader{
+    width:200px;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box ;
+
+
+}
+.aheader{text-decoration:none;
+    font-size:medium;}
+
+#timezoner{
+
+    width:120px;
+}
+
+
+a[alt="ACCUEIL"],a[alt="ADMINISTRATION"]{
+    font-size:medium;
+}
+
+.navbar{
+    display :flex;
+    justify-content: space-between;
+
+    /* padding:16px; */
+
+}
+.logo_titleheader{font-size:x-small;}
+
+
+.navbar ul {
+    display:flex;
+    align-items:center;
+    list-style-type: none;
+}
+.navbar ul li a{
+    padding:12px;
+    /* margin:0 6px; */
+}
+
+.navbar ul li a:hover{
+
+    border-radius:8px;
+}
+
+.navbar ul li a:focus,#LOGOUT:focus{
+
+
+    text-decoration: underline;
+}
+
+
+#LOGOUT{
+    position:absolute;
+    top:160px;
+    right:560px;
+    text-decoration:none;
+    color:#fff;
+
+}
+
+
+
+#switch{
+    height:70px;
+    width:70px;
+    position:absolute;
+    top:35px;
+    right:80px;
+    /* text-align:center; */
+}
+/* .switch{
+
+
+} */
+/* #switchtheme{
+
+    width:10%;
+    height:50px;
+    position:absolute;
+    top:45px;
+    right:90px;
+    text-align:center;
+} */

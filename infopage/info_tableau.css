@@ -1,0 +1,33 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin : 0;
+    padding: 0;
+}
+body{
+height : 50vh;
+}
+table{
+border-collapse: collapse;
+
+width: auto;
+
+
+cursor : pointer;
+
+
+}
+th{
+
+color : #fff;
+text-align: left;
+
+
+}
+th, td{
+padding : 10px 15px;
+
+}
+tr, td, th{
+border:1px solid #ddd;
+text-align:center;
+}

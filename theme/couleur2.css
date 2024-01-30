@@ -1,0 +1,68 @@
+#searchSubmit{
+    background-color:tomato;
+    border-color:tomato;
+}
+
+#searchInput:focus{
+    background-color: cyan;
+
+}
+
+.navbar,.footbar,#info,main{
+    background-color: red;
+}
+
+.logo_titleheader,.navbar ul li a,.logo_titlefooter,.footbar ul li a {color:cyan;}
+
+
+.navbar ul li a:hover, .footbar ul li a:hover{
+    color:red;
+    background-color: tomato;}
+
+.navbar ul li a:focus,#LOGOUT:focus,.footbar ul li a:focus{
+    color:red;
+    background-color:cyan;
+}
+
+#LOGOUT,.btn-submit{
+    background-color: tomato;
+}
+
+.footbar,  .logo_titlefooter,.contact-info a,.copyright-text,.form-label{
+    color:cyan;
+}
+
+.contact-info svg ,.btn-submit:hover{
+    fill: cyan;
+}
+
+.form-input {
+  border-color:#ccc;
+}
+.iframeContainer{
+    border-color: tomato;
+   }
+
+
+body{
+    background-color:red;
+   }
+#switch{
+    background-color: tomato;
+}
+#switch:hover{
+    background-color: cyan;
+}
+.iframeContainer{
+    background-color: cyan;
+}
+
+
+.container{background-color:red;}
+.matiere{border-color:tomato;}
+.container  {color: cyan;}
+.container h3{ color:tomato;
+}
+.lien {color:cyan}
+.lien:hover{background-color:tomato;color:cyan;}
+.lien:focus{background-color:tomato;color:red;}

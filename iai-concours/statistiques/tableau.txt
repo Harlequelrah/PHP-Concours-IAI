@@ -1,0 +1,25 @@
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+.center-table {
+    width: 50%; /* Ajustez la largeur selon vos besoins */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    /* Autres styles de tableau selon vos besoins */
+}
+
+table, th, td {
+    border: 3px double #1d1d1d;
+    text-align:center;
+}

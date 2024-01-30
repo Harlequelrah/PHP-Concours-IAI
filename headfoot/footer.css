@@ -1,0 +1,186 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Kalnia:wght@300;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+footer{
+  font-family: 'Kalnia', serif;
+  font-size:10px;
+  text-align:center;
+  /* height:250px; */
+  bottom:0;
+}
+
+.footbar {
+  display :flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.logoiaifooter {
+width: 50px;
+height: auto;
+}
+
+.logo_titlefooter {
+
+  font-size: 12px;
+  margin-top: 10px;
+}
+.contact-info{
+  display:flex;
+}
+
+.contact-info svg {
+
+width: 16px;
+height: 16px;
+margin-right: 8px;
+}
+
+.contact-info a {
+  text-decoration: none;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+/* .contact-info a:hover {
+  color: #3498db;
+} */
+
+.contact-info span {
+  margin-left: 5px;
+}
+
+
+  .copyright-text {
+    font-size: 12px;
+    margin-top: 10px;
+
+  }
+
+  .copyright-text ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align:center;
+  }
+
+  .copyright-text li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+.apropos ul{
+text-align:center;
+justify-content: baseline;
+justify-items: center;
+}
+#pc{
+   position:relative;
+   right:25px;
+}
+.ctndiv{
+  position :relative;
+  left:60px;
+}
+.contactdiv{
+  text-align: justify;
+}
+  .footbar ul li a:hover{
+    border-radius:8px;
+}
+.footbar ul {
+    display:inline-block;
+    align-items:center;
+    list-style-type: none;
+    /* text-align:justify;
+    justify-items: center;
+    justify-content: center; */
+
+}
+textarea{
+  width:200px;
+  height:70px;
+}
+
+.footbar ul li a{
+    padding:10px;
+    margin:0 6px;
+    font-size:10px;
+}
+
+.ctn{
+  margin-right:40px;
+}
+/* .container-foot {
+  margin: 10px;
+} */
+
+.contact-form {
+  /* display:flex; */
+  /* max-width: 300px; */
+   width:300px;
+   margin: auto;
+}
+
+.form-group {
+  margin-bottom: 4px;
+  margin-right:50px;
+}
+
+.form-label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 4px;
+
+}
+
+
+.form-input {
+  width: 100%;
+  padding: 8px;
+  font-size: 12px;
+  border: 1px solid ;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-help {
+  font-size: 10px;
+  /* color: #777; */
+  margin-top: 2px;
+}
+
+.btn-submit {
+  position :relative;
+  left:120px;
+  bottom:43px;
+  width:30px;
+  color: #fff;
+  /* padding: 8px 16px; */
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+}
+
+
+
+  .footbar ul li a:focus{
+
+
+    text-decoration: underline;
+}
+
+
+
+
+
