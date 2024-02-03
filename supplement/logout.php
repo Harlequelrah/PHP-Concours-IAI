@@ -17,5 +17,5 @@ setcookie(
 //'httponly' => true: Cette option indique que le cookie ne peut être accédé que via le protocole HTTP, et non pas via des scripts côté client (comme JavaScript). Cela aide à protéger le cookie contre certaines attaques potentielles.
 ?>
 <?php session_destroy() ; ?>
-<?php header("Location: ../accueil/accueil.php");
+<?php header("Location: ../accueil/accueil.php?couleur=$_GET[couleur]");
 exit;?>

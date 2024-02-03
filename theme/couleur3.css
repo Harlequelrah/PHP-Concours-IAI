@@ -13,6 +13,7 @@
     background-color: turquoise;
 }
 
+
 .logo_titleheader,.navbar ul li a,.logo_titlefooter,.footbar ul li a {color:#fff;}
 
 
@@ -65,3 +66,34 @@ body{
 .lien {color:grey}
 .lien:hover{background-color:purple;color:grey}
 .lien:focus{background-color:purple;color:turquoise}
+.box{
+background:turquoise;
+}
+.box::before,.box::after{
+background: linear-gradient(0deg,transparent,transparent, gray, gray );
+}
+h2,.box form .inputBox input{
+color:gray;
+}
+.box form input[type="submit"]:focus{background-color: purple;}
+.box form .inputBox span,.box form .link a{color:turquoise};
+.box form .inputBox input:valid ~ span,
+.box form .inputBox input:focus ~ span{
+color:purple;}
+.box form .inputBox i,.box form input[type="submit"]{background:purple;}
+.notice{color:purple}
+.borderLine::before,.borderLine::after{
+background: linear-gradient(0deg,transparent,transparent, purple,purple,purple);}
+
+.erreur{
+    background-color: purple;
+    color:gray;
+}
+#seconnecter{
+    color:gray;
+}
+.box form .link a:hover,.box form .inputBox input:valid ~ i,
+.box form .inputBox input:focus ~ i
+.box form .link a:nth-child(2){
+    color:gray;
+}

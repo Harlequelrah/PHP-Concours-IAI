@@ -22,6 +22,8 @@
                     <a class="lien" href="javascript:void(0);" onclick="parent.updateInfopage('<?php echo '../infopage/info1.php?couleur=' . $_GET['couleur'];?>')" target="infopage">INFORMATION GENERALE</a>
                 </div>
             </td>
+        </tr>
+        <tr>
             <td>
                 <div class="space">
                     <a class="lien" href="javascript:void(0);" onclick="parent.updateInfopage('<?php echo '../infopage/info3.php?couleur=' . $_GET['couleur']; ?>')" target="infopage">LE TEST D'ADMISSION</a>
@@ -29,11 +31,14 @@
             </td>
         </tr>
         <tr>
+
             <td>
                 <div class="space">
                     <a class="lien" href="javascript:void(0);" onclick="parent.updateInfopage('<?php echo '../infopage/info2.php?couleur=' . $_GET['couleur'];?>')" target="infopage">DOSSIER</a>
                 </div>
             </td>
+        </tr>
+        <tr>
             <td>
                 <div class="space">
                     <a class="lien" href="javascript:void(0);" onclick="parent.updateInfopage('<?php echo '../infopage/info4.php?couleur=' . $_GET['couleur'];?>')" target="infopage">LES FORMATIONS ET CERTIFICATIONS</a>

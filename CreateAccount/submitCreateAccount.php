@@ -17,7 +17,7 @@ if (isset($_POST['check'])) {
     $_SESSION['LOGGED_USER'] = $username;
 }
 
-header("Location: ../accueil/accueil.php");
+header("Location: ../accueil/accueil.php?couleur=$_GET[couleur]");
 exit;
 ?>
 

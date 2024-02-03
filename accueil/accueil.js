@@ -40,11 +40,16 @@ $(document).ready(function() {
         colors=['#1d1d1d','red','cyan','#fff'];
         $('#infopage').css('background-color',colors[cpt%4]);
         messagecouleurs=['../infopage/info.php?couleur=1','../infopage/info.php?couleur=2','../infopage/info.php?couleur=3','../infopage/info.php?couleur=4'];
+        creation_compte=['../CreateAccount/CreateAccount.php?couleur=1','../CreateAccount/CreateAccount.php?couleur=2','../CreateAccount/CreateAccount.php?couleur=3','../CreateAccount/CreateAccount.php?couleur=4'];
+        connexion_compte=['../connexion/Connexion.php?couleur=1','../connexion/Connexion.php?couleur=2','../connexion/Connexion.php?couleur=3','../connexion/Connexion.php?couleur=4']
         $('#info').attr('src',messagecouleurs[cpt % 4]);
+        $('#createaccountlink').attr('href',creation_compte[cpt % 4]);
+        $('#connexionlink').attr('href',connexion_compte[cpt % 4]);
+
+
         cpt += 1;
+    })
         // cpt=cpt+""
         // $("#color").text(cpt);
-        // alert("compteur apres"+cpt);
-
-    });
-});
+        // alert("compteur apres"+
+})

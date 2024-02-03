@@ -28,7 +28,7 @@
     background-color: #ffb42a;
 }
 
-.footbar,  .logo_titlefooter,.contact-info a,.copyright-text,.form-label{
+.footbar,  .logo_titlefooter,.contact-info a,.copyright-text ,.form-label{
     color:#ffb42a;
 }
 
@@ -60,3 +60,30 @@ body{
 .lien {color:#fff}
 .lien:hover{background-color:#ffb42a;color:#1d1d1d}
 .lien:focus{background-color:darkmagenta;color:#1d1d1d}
+.erreur{
+    background:#ffb42a;
+    color:darkmagenta;
+}
+.box form .link a:hover,
+.box form .link a:nth-child(2),.box form .inputBox input:valid ~ i,
+.box form .inputBox input:focus ~ i{
+    color:#ffb42a;
+}
+.box{
+    background:#1d1d1d;
+}
+.box::before,.box::after{
+    background: linear-gradient(0deg,transparent,transparent, #45f3ff, #45f3ff,#45f3ff);
+}
+h2,.box form .inputBox input{
+    color:#1d1d1d;
+}
+.box form input[type="submit"]:focus{background-color: purple;}
+.box form .inputBox span,.box form .link a{color:#fff};
+.box form .inputBox input:valid ~ span,
+.box form .inputBox input:focus ~ span{
+    color:tomato;}
+    .box form .inputBox i,.box form input[type="submit"]{background:#ffb42a;}
+.notice{color:cyan}
+.borderLine::before,.borderLine::after{
+    background: linear-gradient(0deg,transparent,transparent, #ff2770, #ff2770,#ff2770);}

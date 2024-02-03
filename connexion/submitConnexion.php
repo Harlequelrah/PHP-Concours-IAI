@@ -26,12 +26,14 @@ if (isset($_POST['UserName']) &&  isset($_POST['password'])) {
 
 
     if (isset( $_SESSION['LOGGED_USER'])){
-         header("Location: ../accueil/accueil.php");
-         exit;}
+        echo $_GET['couleur'];
+         header("Location: ../accueil/accueil.php?couleur=$_GET[couleur]");
+         exit;
+        }
     else{
 
 
-        header("Location: ../connexion/Connexion.php");
+        header("Location: ../connexion/Connexion.php?couleur=$_GET[couleur]");
         exit;
        }
 

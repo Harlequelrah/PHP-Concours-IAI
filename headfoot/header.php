@@ -25,8 +25,8 @@
 
         <?php if (!isset($_SESSION['LOGGED_USER']))
         {
-          echo "<li><a class='aheader' href='../CreateAccount/CreateAccount.php'>S' INSCRIRE</a></li>";
-          echo "<li ><a class='aheader' href='../connexion/Connexion.php'>SE CONNECTER</a></li>" ;
+          echo "<li><a id='createaccountlink' class='aheader' href='../CreateAccount/CreateAccount.php?couleur=1'>S' INSCRIRE</a></li>";
+          echo "<li ><a id='connexionlink' class='aheader' href='../connexion/Connexion.php?couleur=1'>SE CONNECTER</a></li>" ;
           echo "<li style='visibility:hidden'><a class=aheder href='#'>POSTULER AU CONCOURS</a></li>";
           echo "<li style='visibility:hidden'><a class=aheder href='#'>CONSULTER CANDIDATURE</a></li>";
 
@@ -65,7 +65,7 @@
      ?>
      </a> -->
 
-     <a href="../supplement/logout.php" id="LOGOUT"><?php if (isset($_SESSION['LOGGED_USER']))echo 'Utilisateur:'.$_SESSION['LOGGED_USER']; ?></a>
+     <a href='../supplement/logout.php?couleur='.$_GET['couleur'] id="LOGOUT"><?php if (isset($_SESSION['LOGGED_USER']))echo 'Utilisateur:'.$_SESSION['LOGGED_USER']; ?></a>
 
     </nav>
 

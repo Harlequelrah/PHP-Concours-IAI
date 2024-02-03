@@ -8,6 +8,8 @@ height : 50vh;
 }
 table{
 border-collapse: collapse;
+/* text-align:justify;
+justify-content: center; */
 
 width: auto;
 
@@ -28,6 +30,6 @@ padding : 10px 15px;
 
 }
 tr, td, th{
-border:1px solid #ddd;
+/* border:1px solid #ddd; */
 text-align:center;
 }

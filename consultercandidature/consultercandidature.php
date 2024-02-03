@@ -206,7 +206,7 @@ header("Location:consultercandidature.php");
 <script>
     function confirmation(){
         if (confirm("Etes vous sur de vouloir supprimer votre candidature?")){
-            window.open("../modifiercandidature/supprimercandidature.php");
+            window.open("../modifiercandidature/supprimercandidature.php",'_self');
         }
 
     }

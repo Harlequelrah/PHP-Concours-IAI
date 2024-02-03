@@ -38,6 +38,7 @@
 
 .form-input {
   border-color:#ccc;
+
 }
 .iframeContainer{
     border-color: #555555;
@@ -65,3 +66,33 @@ body{
 .lien {color:#555555}
 .lien:hover{background-color:#3498db;color:#555555}
 .lien:focus{background-color:#3498db;color:#f5f5f5}
+.box{
+    background:#ccc;
+}
+.box::before,.box::after{
+    background: linear-gradient(0deg,transparent,transparent, #3498db, #3498db );
+}
+h2,.box form .inputBox input{
+    color:#ccc;
+}
+.box form input[type="submit"]:focus{background-color: #333333;}
+.box form .inputBox span,.box form .link a{color:#555555};
+.box form .inputBox input:valid ~ span,
+.box form .inputBox input:focus ~ span{
+    color:#fff;}
+    .box form .inputBox i,.box form input[type="submit"]{background:#3498db;}
+.notice{color:#f5f5f5}
+.borderLine::before,.borderLine::after{
+background: linear-gradient(0deg,transparent,transparent, #333333,#333333,#333333);}
+.erreur{
+    background-color: #3498db;
+    color:#333333;
+}
+#seconnecter{
+     color:#ccc;
+}
+.box form .link a:hover,
+.box form .link a:nth-child(2),.box form .inputBox input:valid ~ i,
+.box form .inputBox input:focus ~ i{
+    color:#ccc;
+}

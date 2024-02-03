@@ -8,14 +8,17 @@
 
 }
 footer{
+
   font-family: 'Kalnia', serif;
   font-size:10px;
   text-align:center;
   /* height:250px; */
   bottom:0;
+  height:300px;
 }
 
 .footbar {
+
   display :flex;
   justify-content: space-between;
   padding: 10px;

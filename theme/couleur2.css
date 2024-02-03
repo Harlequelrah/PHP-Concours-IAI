@@ -66,3 +66,31 @@ body{
 .lien {color:cyan}
 .lien:hover{background-color:tomato;color:cyan;}
 .lien:focus{background-color:tomato;color:red;}
+.box{
+    background:red;
+}
+.box::before,.box::after{
+    background: linear-gradient(0deg,transparent,transparent, cyan, cyan,cyan );
+}
+h2,.box form .inputBox input{
+    color:cyan;
+}
+.box form input[type="submit"]:focus{background-color: tomato;}
+.box form .inputBox span,.box form .link a{color:red};
+.box form .inputBox input:valid ~ span,
+.box form .inputBox input:focus ~ span{
+    color:tomato;}
+    .box form .inputBox i,.box form input[type="submit"]{background:tomato;}
+.notice{color:cyan}
+.borderLine::before,.borderLine::after{
+background: linear-gradient(0deg,transparent,transparent, tomato,tomato,tomato);}
+
+.erreur{
+    background-color: cyan;
+    color:tomato;
+}
+#seconnecter,.box form .inputBox input:valid ~ i,
+.box form .inputBox input:focus ~ i,.box form .link a:hover,
+.box form .link a:nth-child(2){
+    color:cyan;
+}
