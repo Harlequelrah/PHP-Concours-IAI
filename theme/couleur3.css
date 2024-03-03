@@ -4,10 +4,16 @@
 }
 
 
-#searchInput:focus{
-    background-color: purple;
+#searchInput,.box form .inputBox input:valid ~ span:not(#pdfile1),
+.box form .inputBox input:focus ~ span:not(#pdfile1){
+    /* color:#ffb42a; */
+    color:turquoise;
+
 
 }
+select{
+    background-color:turquoise;
+ }
 
 .navbar,.footbar,#info,main{
     background-color: turquoise;
@@ -85,7 +91,7 @@ color:purple;}
 .borderLine::before,.borderLine::after{
 background: linear-gradient(0deg,transparent,transparent, purple,purple,purple);}
 
-.erreur{
+.erreur,#dateline{
     background-color: purple;
     color:gray;
 }
@@ -96,4 +102,24 @@ background: linear-gradient(0deg,transparent,transparent, purple,purple,purple);
 .box form .inputBox input:focus ~ i
 .box form .link a:nth-child(2){
     color:gray;
+}
+
+#laglink{color:purple;}
+#retourlink{
+    color:turquoise;
+}
+.consbout{
+    background-color:#333333;
+    color:#ccc;
+}
+.consulteside{
+   background-color:purple;
+
+}
+
+ #laglink a{
+    color:gray;
+}
+.pdf{
+    background-color:purple;
 }

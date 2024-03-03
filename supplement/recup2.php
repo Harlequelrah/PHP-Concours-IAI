@@ -44,7 +44,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 'httponly' => true,
             ]
           );
-         $mail->Body    = "<a href='http://localhost:8080/PHP-PROJECT/current/supplement/recuperation.php?token=$token'>changer mon mot de passe</a>";
+        //  $mail->Body    = "<a href='http://localhost:8080/PHP-PROJECT/current/supplement/recuperation.php?token=$token'>changer mon mot de passe</a>";
+         $mail->Body    = "<a href='http://localhost:8080/supplement/recuperation.php?token=$token'>changer mon mot de passe</a>";
 
          $mail->send();
          $succes=true;

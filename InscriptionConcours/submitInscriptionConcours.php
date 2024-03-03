@@ -3,6 +3,18 @@ session_start();
 include_once('../supplement/variables.php');
 include_once('../supplement/functions.php');
 
+$query = "SELECT MAX(id_candidat) AS max_id FROM candidats";
+$result = $mybase->query($query)->fetch(PDO::FETCH_ASSOC);
+$last_id = $result['max_id'];
+
+
+if ($last_id === null) {
+    $last_id = 0;
+}
+
+
+$query = "ALTER TABLE candidats AUTO_INCREMENT = " . ($last_id + 1);
+$mybase->exec($query);
 
 $nom = $_POST['nom'];
 $prenom = $_POST['prenom'];
@@ -30,13 +42,13 @@ $insert->execute([
 $filesname=['document_naissance','document_nationalite','document_attestation_bac','photo'];
 foreach($filesname as $file){
     if(isset($_FILES[$file]) && file_exists($_FILES[$file]['tmp_name'])&& $_FILES[$file]['error'] == UPLOAD_ERR_OK && $_FILES[$file]['size']<=16000000) {
-        $file_name=$_FILES[$file]['tmp_name'];
-        $file_info=pathinfo($_file_name);
+        $file_info=pathinfo($_FILES[$file]['name']);
         $extension=$file_info['extension'];
-        $ext=pathinfo($file_name)['extension'];
         $isAllowed=['gif','png','jpg','jpeg','pdf'];
         if(in_array($extension,$isAllowed)){
-            $chemin="../ficherconcours/$file/".$id_etudiant.basename($file_name);
+
+           $chemin = "../ficherconcours/$file/".$file."_candidat_$id_etudiant.".$extension;
+            $file_name=$_FILES[$file]['tmp_name'];
             move_uploaded_file($file_name,$chemin);
             $insert=$mybase->prepare("UPDATE candidats SET $file=:$file WHERE id_etudiant=$id_etudiant");
             $insert->execute([$file=>$chemin],);
@@ -44,7 +56,7 @@ foreach($filesname as $file){
 
     }
 }
-
-header("Location:../consultercandidature/consultercandidature.php?act=refresh");
+header("Location:../consultercandidature/consultercandidature.php");
+// header("Location:../consultercandidature/consultercandidature.php?act=refresh");
 exit();
 ?>

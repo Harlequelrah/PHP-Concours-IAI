@@ -23,7 +23,7 @@ p{
 .box{
     position: relative;
     width:500px;
-    height:850px;
+    height:1090px;
     background: #1c1c1c;
     border-radius: 8px;
     overflow: hidden;
@@ -150,11 +150,11 @@ span{
 .box form .link a:nth-child(2){
     color:#fff;
 }
-a{color:purple;}
-a:hover{
 
-    color:#ff2770;
+.pdf{
+    background-color:darkmagenta;
 }
-button{
-    background-color:magenta;
+.consbout{
+    background-color:#23242a;
+    color:#ccc;
 }

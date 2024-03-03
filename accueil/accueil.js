@@ -42,9 +42,15 @@ $(document).ready(function() {
         messagecouleurs=['../infopage/info.php?couleur=1','../infopage/info.php?couleur=2','../infopage/info.php?couleur=3','../infopage/info.php?couleur=4'];
         creation_compte=['../CreateAccount/CreateAccount.php?couleur=1','../CreateAccount/CreateAccount.php?couleur=2','../CreateAccount/CreateAccount.php?couleur=3','../CreateAccount/CreateAccount.php?couleur=4'];
         connexion_compte=['../connexion/Connexion.php?couleur=1','../connexion/Connexion.php?couleur=2','../connexion/Connexion.php?couleur=3','../connexion/Connexion.php?couleur=4']
+        inscription=['../InscriptionConcours/InscriptionConcours.php?couleur=1','../InscriptionConcours/InscriptionConcours.php?couleur=2','../InscriptionConcours/InscriptionConcours.php?couleur=3','../InscriptionConcours/InscriptionConcours.php?couleur=4']
+        consulter=['../consultercandidature/consultercandidature.php?couleur=1','../consultercandidature/consultercandidature.php?couleur=2','../consultercandidature/consultercandidature.php?couleur=3','../consultercandidature/consultercandidature.php?couleur=4']
+       modif=['../modifiercandidature/modifiercandidature.php?statut=en_cours&couleur=1','../modifiercandidature/modifiercandidature.php?statut=en_cours&couleur=2','../modifiercandidature/modifiercandidature.php?statut=en_cours&couleur=3','../modifiercandidature/modifiercandidature.php?statut=en_cours&couleur=4']
         $('#info').attr('src',messagecouleurs[cpt % 4]);
         $('#createaccountlink').attr('href',creation_compte[cpt % 4]);
         $('#connexionlink').attr('href',connexion_compte[cpt % 4]);
+        $('#inscription').attr('href',inscription[cpt % 4]);
+        $('#conslink').attr('href',consulter[cpt % 4]);
+        $('#modiflink').attr('href',modif[cpt % 4]);
 
 
         cpt += 1;

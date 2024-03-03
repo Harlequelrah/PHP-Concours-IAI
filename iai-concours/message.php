@@ -31,7 +31,7 @@ include('../supplement/functions.php');
         <?php endforeach; ?>
         <!-- ... autres lignes ... -->
     </table>
-    <button id="retouradmin" ><a href="../admin.php">Retour</a></button>
+    <button id="retouradmin" ><a style="color:blue"  href="../admin.php">Retour</a></button>
 </div>
 </body>
 </html>

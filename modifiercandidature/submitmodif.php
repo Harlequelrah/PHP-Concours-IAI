@@ -6,16 +6,16 @@ $id_etudiant=get_id_etudiant($etudiants,$_SESSION['LOGGED_USER']);
 $colonnes=[];
 if(isset($_POST['nom'])) $colonnes['nom']=$_POST['nom'];
 if(isset($_POST['prenom'])) $colonnes['prenom'] = $_POST['prenom'];
-if(isset($_POST['date_naissance']))$colonnes['date_naissance']=$_POST['date_naissance'];
+if(isset($_POST['date_naissance']) && !empty($_POST['date_naissance']))$colonnes['date_naissance']=$_POST['date_naissance'];
 if(isset($_POST['sexe']))$colonnes['sexe']=$_POST['sexe'];
 if(isset($_POST['nationalite']))$colonnes['nationalite']=$_POST['nationalite'];
-if(isset($_POST['annee_bac']))$colonnes['annee_bac']=$_POST['annee_bac'];
+if(isset($_POST['annee_bac'])&& !empty($_POST['annee_bac']))$colonnes['annee_bac']=$_POST['annee_bac'];
 if(isset($_POST['serie']))$colonnes['serie']=$_POST['serie'];
 $filesname=['document_naissance','document_nationalite','document_attestation_bac','photo'];
 foreach($filesname as $file){
     if(isset($_FILES[$file]) && file_exists($_FILES[$file]['tmp_name'])&& $_FILES[$file]['error'] == UPLOAD_ERR_OK && $_FILES[$file]['size']<=16000000) {
         $file_name=$_FILES[$file]['tmp_name'];
-        $file_info=pathinfo($_file_name);
+        $file_info=pathinfo($file_name);
         $extension=$file_info['extension'];
         $ext=pathinfo($file_name)['extension'];
         $isAllowed=['gif','png','jpg','jpeg','pdf'];
@@ -42,6 +42,6 @@ $insert->execute([$cle=>$valeur],);
 
 }
 
-header("Location:../consultercandidature/consultercandidature.php");
+header("Location:../consultercandidature/consultercandidature.php?couleur=$_GET[couleur]");
 
 ?>

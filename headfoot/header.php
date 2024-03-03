@@ -1,5 +1,5 @@
-<?php //session_start() ;
-//include_once('../supplement/variables.php');
+<?php  ;
+// include_once('../supplement/variables.php');
 ?>
 
     <nav class="navbar">
@@ -18,7 +18,11 @@
 
 
 
-
+    <?php
+         $date1 = new DateTime();
+         $date2 =new DateTime($date_limite_inscription);
+         $interval = $date1->diff($date2);
+    ?>
 
 
 
@@ -34,11 +38,20 @@
 
         else{
           if(!iscandidat($candidats,$etudiants,$_SESSION['LOGGED_USER'])){
-            echo "<li ><a class='aheader' href='../InscriptionConcours/InscriptionConcours.php'>POSTULER AU CONCOURS</a></li>";}
+            echo "<li ><a class='aheader' id='inscription' href='../InscriptionConcours/InscriptionConcours.php?couleur=1'>POSTULER AU CONCOURS</a></li>";
+            // $date1 =date('Y-m-d');
+
+            echo "<span id='dateline'>Jours restants pour postuler : " . $interval->format('%a jours') . "</span>";
+
+          }
          else {
-          echo " <li><a class='aheader' href='../consultercandidature/consultercandidature.php'>CONSULTER CANDIDATURE</a></li>" ;
+          if (!isset($_GET['couleur'])) {echo " <li><a class='aheader'id='conslink' href='../consultercandidature/consultercandidature.php?couleur=1'>CONSULTER CANDIDATURE</a></li>" ;}
+         else{ echo " <li><a class='aheader'id='conslink' href='../consultercandidature/consultercandidature.php?couleur=$_GET[couleur]'>CONSULTER CANDIDATURE</a></li>" ;}
           if (!has_complete_inscription($candidats,$etudiants,$_SESSION['LOGGED_USER'],$candidats_inscription_en_cours)){
-            echo " <li><a class='aheader' href='../modifiercandidature/modifiercandidature.php?statut=en_cours'>COMPLETER SA CANDIDATURE</a></li>";
+
+            if (isset($_GET['couleur'])) {echo "<li><a id='modiflink' class='aheader' href='../modifiercandidature/modifiercandidature.php?statut=en_cours&couleur=1'>COMPLETER SA CANDIDATURE</a></li>";}
+             else{ echo "<li><a id='modiflink' class='aheader' href='../modifiercandidature/modifiercandidature.php?statut=en_cours&couleur=1'>COMPLETER SA CANDIDATURE</a></li>";}
+            echo "<span id='dateline'>Jours restants pour completer : " . $interval->format('%a jours') . "</span>";
           }
         }
           echo '<li><a class=aheader href=#>'.date('d/m/Y').'</a></li>';
@@ -50,14 +63,14 @@
 
 
       </ul>
-      <button id="switch" title="Changer le thème "><?php include('SVG.html') ?></button>
+      <button id="switch" title="Changer le thème "><?php include('../svg/SVG.html') ?></button>
       <!-- <button id="switchtheme" alt=''> -->
 
       <!-- </button> -->
       <!-- <button id="switch" ><img src="../images/changertheme.jpg" id="switchtheme" title="changer le thème"/></button> -->
       <form id="searchForm">
-      <input type="search" id="searchInput" placeholder="Rechercher" pattern=".*\S.*" title="Veuillez entrer du texte">
-      <button id="searchSubmit" type="submit">Rechercher</button>
+      <input type="search" id="searchInput" placeholder="Rechercher. . . . ." pattern=".*\S.*" title="Veuillez entrer du texte">
+      <button id="searchSubmit" type="submit"><?php include('../svg/loupe.svg') ?></button>
      </form>
      <!-- <a href="../supplement/logout.php" id="LOGOUT" >
      <?php //if (isset($_SESSION['LOGGED_USER']))echo $_SESSION['LOGGED_USER'];
@@ -65,7 +78,7 @@
      ?>
      </a> -->
 
-     <a href='../supplement/logout.php?couleur='.$_GET['couleur'] id="LOGOUT"><?php if (isset($_SESSION['LOGGED_USER']))echo 'Utilisateur:'.$_SESSION['LOGGED_USER']; ?></a>
+     <a href='../supplement/logout.php'id="LOGOUT"><?php if (isset($_SESSION['LOGGED_USER']))echo 'Utilisateur:'.$_SESSION['LOGGED_USER']; ?></a>
 
     </nav>
 

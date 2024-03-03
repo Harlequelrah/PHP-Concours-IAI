@@ -50,6 +50,10 @@ include_once('../supplement/functions.php');?>
                 target="affichage">Liste des candidats par nationalite</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="javascript:void(0);" onclick="parent.updateaffichage('statistiques/listedescandidatsetdocuments.php')"
+                target="affichage">Liste des candidats et documents</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="javascript:void(0);" onclick="parent.updateaffichage('statistiques/listedescandidatsayantomisduploaderundocument.php')"
                 target="affichage">Liste des candidats ayant omis d’uploader un document</a>
               </li>

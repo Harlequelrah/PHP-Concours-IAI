@@ -1,16 +1,21 @@
 #searchSubmit{
     background-color:tomato;
-    border-color:tomato;
 }
-
-#searchInput:focus{
+#searchInput{
     background-color: cyan;
-
+    color:tomato;
+}
+.box form .inputBox input:valid ~ span:not(#pdfile1),
+.box form .inputBox input:focus ~ span:not(#pdfile1){
+    color:red;
 }
 
 .navbar,.footbar,#info,main{
     background-color: red;
 }
+select{
+    background-color:cyan;
+ }
 
 .logo_titleheader,.navbar ul li a,.logo_titlefooter,.footbar ul li a {color:cyan;}
 
@@ -85,7 +90,7 @@ h2,.box form .inputBox input{
 .borderLine::before,.borderLine::after{
 background: linear-gradient(0deg,transparent,transparent, tomato,tomato,tomato);}
 
-.erreur{
+.erreur,#dateline{
     background-color: cyan;
     color:tomato;
 }
@@ -94,3 +99,18 @@ background: linear-gradient(0deg,transparent,transparent, tomato,tomato,tomato);
 .box form .link a:nth-child(2){
     color:cyan;
 }
+.consulteside{
+    color:cyan;
+}
+.consbout{
+    background-color:tomato;
+    color:cyan;}
+    #laglink{
+        color:cyan;
+    }
+    #retourlink{
+        color:cyan;
+    }
+    .pdf{
+        background-color:tomato;
+    }

@@ -20,6 +20,7 @@ $c=$mybase->prepare('SELECT * FROM candidats');
 $c->execute();
 $candidats=$c->fetchAll();
 
+
 $d=$mybase->prepare("SELECT * FROM dates_concours");
 $d->execute();
 $date=$d->fetchAll();

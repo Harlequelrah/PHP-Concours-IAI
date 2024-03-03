@@ -8,19 +8,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="modifiercandidature.css">
     <title>Formulaire d'inscription</title>
-    <script language="javascript" src="https://code.jquery.com/jquery-3.7.1.js"> </script>
+    <script language="javascript" src="../assets/dist/js/jquery.js" >
+    // <script language="javascript" src="https://code.jquery.com/jquery-3.7.1.js"> </script>
 </head>
-
 <body>
     <div class="box">
         <span class="borderLine"></span>
         <form method="POST" action="submitmodif.php" enctype="multipart/form-data">
         <p> Utilisateur :<a href="../supplement/logout.php"><?php echo $_SESSION['LOGGED_USER'] ;?></a></p>
         <?php if (isset($_GET['statut']) && $_GET['statut']=='en_cours') : ?>
+            <?php if (isset($_GET['couleur']))  $col='../accueil/accueil.php?couleur='.$_GET['couleur']?>
+            <span align="center"><a href="<?php echo $col ?>">Retour</a> </span>
             <h2>Formulaire de Completion de l inscription</h2>
+
 
         <?php else : ?>
             <h2>Formulaire de Modification de l inscription</h2>
+
 
             <p>Entrer uniquement les champs que vous souhaitez modifier</p>
             <div class="inputBox">
@@ -145,6 +149,10 @@
 
                 </div>
     <?php endif; ?>
+    <link rel="stylesheet" href="../theme/couleur1.css">
+    <?php  if (isset($_GET['couleur'])) :?>
+     <link rel="stylesheet" href="<?php echo '../theme/couleur'.$_GET['couleur'].'.css';?>">
+    <?php  endif ?>
             <div class="inputBox">
                 <input type="file" id="pdfile2" name="document_naissance" accept=".pdf">
                 <span>Acte de naissance</span>
@@ -161,14 +169,17 @@
                 <i></i>
             </div>
             <input type="submit" value="Soumettre" Onclick="notif()">
+
     </div>
+
 </form>
+
 <script>
     function notif(){
         window.alert("Votre candidature a bien été modifié");
     }
 
-   
+
 
     <?php if (isset($_GET['statut']) && $_GET['statut']=='en_cours') : ?>
 

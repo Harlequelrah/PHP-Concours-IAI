@@ -138,7 +138,7 @@ p{
 }
 .box form .inputBox input:valid ~ span:not(#pdfile1),
 .box form .inputBox input:focus ~ span:not(#pdfile1){
-    color:#ffb42a;
+
     font-size:0.75em;
     transform: translateY(-34px);
 }
@@ -206,9 +206,25 @@ p{
 .sexe {
     margin-right:20px;
 }
-select{
-   background-color:#ffb42a;
+.box form .inputBox input[type="date"] {
+    opacity: 0; /* Rendre le champ invisible */
+
 }
+
+/* Afficher le champ de saisie lorsque le span est cliqué */
+.box form .inputBox span {
+    cursor: pointer; /* Afficher un curseur pointer */
+}
+
+/* Rendre le champ de saisie visible lorsqu'il est actif */
+.box form .inputBox input[type="date"]:focus {
+    opacity: 1; /* Rendre le champ visible */
+    pointer-events: auto; /* Activer les événements de souris */
+}
+
+/* Afficher le texte saisi lorsque le champ est sélectionné */
+
+
 h2{
     text-decoration: underline;
 }
@@ -218,7 +234,8 @@ h2{
 
 }
 .nat > span{
-    color:#8f8f8f;margin-right:36px;
+    color:#8f8f8f;
+    margin-right:36px;
 }
 /* #uploadedfile{
     margin-left:80px;

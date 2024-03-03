@@ -1,10 +1,10 @@
 #searchSubmit{
     background-color:#f5f5f5;
-    border-color:#555555;
+ background-color: #3498db;
 }
 
-#searchInput:focus{
-    background-color: #3498db;
+#searchInput{
+    border-color:#555555;
 
 }
 
@@ -72,9 +72,14 @@ body{
 .box::before,.box::after{
     background: linear-gradient(0deg,transparent,transparent, #3498db, #3498db );
 }
-h2,.box form .inputBox input{
+h2,.box form .inputBox input,.box form .inputBox input:valid ~ span:not(#pdfile1),
+.box form .inputBox input:focus ~ span:not(#pdfile1)
+    /* color:#ffb42a; */{
     color:#ccc;
 }
+select{
+    background-color:#3498db;
+ }
 .box form input[type="submit"]:focus{background-color: #333333;}
 .box form .inputBox span,.box form .link a{color:#555555};
 .box form .inputBox input:valid ~ span,
@@ -84,7 +89,7 @@ h2,.box form .inputBox input{
 .notice{color:#f5f5f5}
 .borderLine::before,.borderLine::after{
 background: linear-gradient(0deg,transparent,transparent, #333333,#333333,#333333);}
-.erreur{
+.erreur,#dateline{
     background-color: #3498db;
     color:#333333;
 }
@@ -95,4 +100,22 @@ background: linear-gradient(0deg,transparent,transparent, #333333,#333333,#33333
 .box form .link a:nth-child(2),.box form .inputBox input:valid ~ i,
 .box form .inputBox input:focus ~ i{
     color:#ccc;
+}
+#laglink{color:#f5f5f5;}
+#retourlink{
+    color:#ccc;
+}
+.consbout{
+    background-color:#333333;
+    color:#ccc;
+}
+.consulteside{
+   background-color:#ccc;
+
+}
+ #laglink a{
+    color:#3498db;
+}
+.pdf{
+    background-color:#3498db;
 }

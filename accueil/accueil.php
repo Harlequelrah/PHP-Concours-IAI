@@ -1,6 +1,7 @@
 <?php session_start() ; ?>
 <?php include_once('../supplement/variables.php');
 include_once('../supplement/functions.php');
+// if (!isset($_SESSION[LOGGED_USER)
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -8,8 +9,8 @@ include_once('../supplement/functions.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script language="javascript" src="https://code.jquery.com/jquery-3.7.1.js"> </script>
-    <script>language="javascript" src="../assets/dist/js/jquery.js"</script>
+    <!-- <script language="javascript" src="https://code.jquery.com/jquery-3.7.1.js"> </script> -->
+    <script language="javascript" src="../assets/dist/js/jquery.js" >
     <script language="javascript" src="mytime.js"></script>
     <?php if (!isset($_GET['couleur'])) :?>
     <link rel="stylesheet" id="couleur" href="../theme/couleur1.css">
@@ -55,6 +56,12 @@ if (isset($_GET['message'])) {
     echo '<script>window.alert("' . $_GET['message'] . '")</script>';
 }
 ?>
+<?php
+if (isset($_GET['contact_success'])) {
+    echo '<script>window.alert("' . $_GET['contact_success'] . '")</script>';
+}
+?>
+
 
 
 <script language="javascript" src="accueil.js"></script>

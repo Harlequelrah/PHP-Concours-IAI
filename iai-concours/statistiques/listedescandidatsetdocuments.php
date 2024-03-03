@@ -1,8 +1,8 @@
 
 <?php include_once('../../supplement/variables.php');
-$select=$mybase->prepare("SELECT id_candidat,nom,prenom,nationalite,sexe,annee_bac,date_naissance,serie from candidats");
+$select=$mybase->prepare("SELECT id_candidat,nom,prenom,document_nationalite,'photo','document_naissance','document_attestation_bac' from candidats");
 $select->execute();
-$select_key=['id_candidat','nom','prenom','nationalite','sexe','annee_bac','date_naissance','serie'];
+$select_key=['id_candidat','nom','prenom','document_nationalite','photo','document_naissance','document_attestation_bac'];
 $candidats_ins=$select->fetchAll();
 ?>
 <!DOCTYPE html>
@@ -22,10 +22,13 @@ $candidats_ins=$select->fetchAll();
 
         <!-- Contenu de votre tableau ici -->
         <?php foreach ($select_key as $key) echo "<th>$key</th>" ?>
-
         <?php foreach($candidats_ins as $cand): ?>
         <tr>
-            <?php  foreach($select_key as $key) echo "<td>$cand[$key]</td>"; ?>
+            <?php  foreach($select_key as $key)
+                    if (in_array($key,['photo','document_naissance','document_nationalite','document_attestation_bac']))
+                        echo  "<td><a href='../$cand[$key]'>$key]</a></td>";
+                    else
+                    echo "<td>$cand[$key]</td>";  ?>
         </tr>
         <?php endforeach; ?>
         <!-- ... autres lignes ... -->

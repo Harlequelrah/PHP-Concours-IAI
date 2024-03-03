@@ -6,6 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="InscriptionConcours.css">
+    <?php if (isset($_GET['couleur'])) :?>
+    <link rel="stylesheet" href="<?php echo '../theme/couleur'.$_GET['couleur'].'.css';?>">
+    <?php endif ?>
     <title>Formulaire d'inscription</title>
 </head>
 
@@ -14,7 +17,9 @@
         <span class="borderLine"></span>
         <form method="POST" action="submitInscriptionConcours.php" enctype="multipart/form-data" >
         <p align="center" >Utilisateur:<a href="../supplement/logout.php"><?php echo $_SESSION['LOGGED_USER'] ;?></a></p>
+            <a align="center" href="../accueil/accueil.php?couleur=<?php  if (isset($_GET['couleur'])) echo $_GET['couleur']?>">Retour</a>
             <h2>Formulaire d'Inscription</h2>
+
             <div class="inputBox">
                 <input type="text" name="nom" required>
                 <span>Nom</span>
@@ -27,13 +32,13 @@
             </div>
             <div class="inputBox">
 
-                <input  type="file" id="pdfile1" name="file1" accept="image/*" >
+                <input  type="file" id="pdfile1" name="photo" accept="image/*" >
                 <span>Insérer photo</span>
                 <i></i>
             </div>
 
             <div class="inputBox">
-                <input type="date" required name="date_naissance">
+                <input type="date" id="date_naissance" required name="date_naissance">
                 <span>Date de naissance</span>
                 <i></i>
             </div>

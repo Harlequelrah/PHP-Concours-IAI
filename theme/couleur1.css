@@ -1,26 +1,30 @@
 #searchSubmit{
-    background-color:#ffb42a;
-    border-color:#ffb42a;
-}
+    background-color:darkmagenta;
+    /* border-color:#ffb42a; */
 
+}
+#searchInput{
+
+    background-color:#ffb42a;
+}
 #searchInput:focus{
-    background-color: darkmagenta;
+    background-color:#ffb42a;
 
 }
 
 .navbar,.footbar,#info,main{
-    background-color: #1d1d1d;
+    background-color: #23242a;
 }
 
 .logo_titleheader,.navbar ul li a,.logo_titlefooter,.footbar ul li a {color:#fff;}
 
 
 .navbar ul li a:hover, .footbar ul li a:hover{
-    color:#1d1d1d;
+    color:#23242a;
     background-color: #ffb42a;}
 
 .navbar ul li a:focus,#LOGOUT:focus,.footbar ul li a:focus{
-    color:#1d1d1d;
+    color:#23242a;
     background-color:darkmagenta;
 }
 
@@ -47,42 +51,49 @@
 
 
 body{
-    background-color:#1d1d1d;
+    background-color:#23242a;
+
    }
 #switch{
     background-color: #ffb42a;
 }
-.container{background-color:#1d1d1d;}
+.container{background-color:#23242a;}
 .matiere{border-color:darkmagenta;}
 .container  {color: #fff;}
 .container h3{ color:darkmagenta;
 }
+.box form .inputBox input:valid ~ span:not(#pdfile1),
+.box form .inputBox input:focus ~ span:not(#pdfile1){
+    color:#ffb42a;}
 .lien {color:#fff}
-.lien:hover{background-color:#ffb42a;color:#1d1d1d}
-.lien:focus{background-color:darkmagenta;color:#1d1d1d}
-.erreur{
+.lien:hover{background-color:#ffb42a;color:#23242a}
+.lien:focus{background-color:darkmagenta;color:#23242a}
+.erreur,#dateline{
     background:#ffb42a;
     color:darkmagenta;
 }
+select{
+    background-color:#ffb42a;
+ }
 .box form .link a:hover,
 .box form .link a:nth-child(2),.box form .inputBox input:valid ~ i,
 .box form .inputBox input:focus ~ i{
     color:#ffb42a;
 }
 .box{
-    background:#1d1d1d;
+    background:#23242a;
 }
 .box::before,.box::after{
     background: linear-gradient(0deg,transparent,transparent, #45f3ff, #45f3ff,#45f3ff);
 }
 h2,.box form .inputBox input{
-    color:#1d1d1d;
+    color:#23242a;
 }
 .box form input[type="submit"]:focus{background-color: purple;}
 .box form .inputBox span,.box form .link a{color:#fff};
 .box form .inputBox input:valid ~ span,
 .box form .inputBox input:focus ~ span{
-    color:tomato;}
+    color:#ffb42a}
     .box form .inputBox i,.box form input[type="submit"]{background:#ffb42a;}
 .notice{color:cyan}
 .borderLine::before,.borderLine::after{
